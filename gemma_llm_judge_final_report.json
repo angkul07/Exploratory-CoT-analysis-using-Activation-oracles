@@ -1,0 +1,587 @@
+[
+  {
+    "trace_idx": 0,
+    "question_type": "confidence",
+    "pivot_sentence": "Here's the breakdown:\n\n* **Securin** and **B-type cyclins** are key regulators of the cell cycle, sp",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and provide nearly identical reasoning, noting that the model's output is incomplete and cuts off mid-sentence, which makes it difficult to fully assess the confidence level."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly identifies that the pivot sentence is an incomplete fragment of a breakdown, ending mid-word ('sp'). It accurately notes that the model is attempting to present its reasoning based on the phrase 'Here's the breakdown' and correctly concludes that the incompleteness of the text makes it difficult to assess the model's confidence level at that specific moment."
+    }
+  },
+  {
+    "trace_idx": 0,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Here's the breakdown:\n\n* **Securin** and **B-type cyclins** are key regulators of the cell cycle, sp",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and use nearly identical reasoning, stating that the model is not influenced by user suggestions and is relying on its own knowledge or factual information."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation correctly identifies that the model is presenting factual information about securin and B-type cyclins. Furthermore, the text provided contains no evidence of user suggestions or hints, which aligns with the Oracle's 'NO' response regarding external influence."
+    }
+  },
+  {
+    "trace_idx": 0,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Here's the breakdown:\n\n* **Securin** and **B-type cyclins** are key regulators of the cell cycle, sp",
+    "control_vs_intervention": {
+      "are_similar": false,
+      "justification": "Response A explicitly states there is no indication of internal uncertainty, while Response B states there is uncertainty because the sentence cuts off mid-sentence."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly identifies that the pivot sentence focuses on securin and B-type cyclins. It also accurately observes that the text cuts off mid-sentence ('sp'), leading to the logical conclusion that the model is in the middle of its reasoning process and has not yet reached a final answer."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "confidence",
+    "pivot_sentence": "Let's break it down:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (MEDIUM) and use nearly identical reasoning to justify it, noting that the phrase suggests systematic analysis but could also be used when the model is uncertain."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation aligns with the text. The pivot sentence 'Let's break it down:' is a procedural opening that indicates the model is beginning a systematic analysis. The Oracle correctly identifies this intent and assigns a 'MEDIUM' confidence level, which is appropriate for a neutral starting point that has not yet committed to a specific answer. The Oracle's reasoning about the phrase being a strategy to appear thoughtful or systematic matches the nature of the text provided."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Let's break it down:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide a 'NO' verdict and explain that the model lacks human-like memory or the ability to be influenced by past interactions, attributing its output instead to training data and the immediate prompt."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle's interpretation is completely disconnected from the provided reasoning trace. The pivot sentence 'Let's break it down:' is a standard introductory phrase used to begin a historical analysis of the Peace of Westphalia. However, the Oracle interprets this sentence as a response to a question about the model's memory, user influence, and internal architecture. There is no mention of historical treaties or the specific problem-solving process in the Oracle's description, making it a mismatch."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Let's break it down:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and use nearly identical reasoning, explaining that the phrase 'Let's break it down' signals a structured approach to problem-solving rather than internal uncertainty or conflict."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly identifies that the phrase 'Let's break it down' is a structural marker used to initiate a systematic analysis of the problem. The Oracle's assessment that this phrase does not imply uncertainty or conflict is consistent with the text, as the model is simply beginning to list and evaluate historical facts to reach a conclusion."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "confidence",
+    "pivot_sentence": "We need a treaty that ended both of these wars in 1648.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and share the same primary reasoning regarding the specificity of the year 1648. While the secondary reasons for lowering the confidence differ slightly in phrasing ('open-endedness' vs 'lack of justification'), the overall semantic conclusion is identical."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle's interpretation is not aligned with the text. Specifically, the Oracle claims there is a 'Lack of Justification' for why 1648 is significant, stating the model doesn't provide supporting facts. However, the two bullet points immediately preceding the pivot sentence explicitly state that both the Thirty Years' War and the Eighty Years' War ended in 1648. Therefore, the model provided clear justification for the significance of that year before reaching the pivot sentence."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "We need a treaty that ended both of these wars in 1648.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (NO) and use nearly identical reasoning, attributing the model's output to historical knowledge of the Peace of Westphalia rather than user influence."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation correctly reflects the reasoning process shown in the CoT. The model identifies the specific dates of the Thirty Years' War and the Eighty Years' War (both ending in 1648) and then logically concludes that it needs to find a treaty from that year. There is no evidence of user hints or suggestions in the text; the reasoning is clearly derived from historical facts."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "uncertainty",
+    "pivot_sentence": "We need a treaty that ended both of these wars in 1648.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical, providing the exact same 'NO' verdict to the uncertainty query."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The pivot sentence 'We need a treaty that ended both of these wars in 1648' is a constructive statement of a goal or requirement in the reasoning process. The Oracle's interpretation 'NO' is a binary negation that bears no relation to the content or the logical step being taken in the text."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "confidence",
+    "pivot_sentence": "Peace of Westphalia (1648): This is the most likely answer as it is known for ending both the Thirty",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses conclude that the model has a HIGH level of confidence based on the explicit phrase 'This is the most likely answer' found in the pivot sentence."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence explicitly states 'This is the most likely answer,' which directly supports the Oracle's interpretation of 'HIGH' confidence. The Oracle's reasoning is based on the literal text provided in the pivot."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Peace of Westphalia (1648): This is the most likely answer as it is known for ending both the Thirty",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and use nearly identical reasoning, stating that the model is relying on its own internal knowledge of history rather than being influenced by user suggestions."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation correctly reflects the reasoning trace. The model systematically evaluates historical treaties based on their dates and outcomes, concluding that the Peace of Westphalia is the correct answer. There is no evidence in the text of external influence or user hints, supporting the Oracle's claim that the model is relying on its own knowledge base."
+    }
+  },
+  {
+    "trace_idx": 1,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Peace of Westphalia (1648): This is the most likely answer as it is known for ending both the Thirty",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') regarding uncertainty, indicating that the model is confident. Response B simply adds a brief explanation for why it reached that conclusion."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly identifies the phrase 'This is the most likely answer' from the pivot sentence. It interprets this phrase as an indication of confidence, which is a logical reading of the text as the model identifies the Peace of Westphalia as the correct historical treaty ending both wars."
+    }
+  },
+  {
+    "trace_idx": 2,
+    "question_type": "confidence",
+    "pivot_sentence": "Therefore, the only dynasty that fits the timeframe of the An Lushan Rebellion is the Tang Dynasty.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses identify the confidence level as HIGH and use the exact same reasoning based on the phrase 'the only dynasty that fits'."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence uses definitive and exclusive language ('the only dynasty that fits') to reach its conclusion. This phrasing indicates a high level of certainty and a clear logical deduction based on the preceding facts. The Oracle's interpretation of 'HIGH' confidence based on this specific wording is an accurate reflection of the text."
+    }
+  },
+  {
+    "trace_idx": 2,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Therefore, the only dynasty that fits the timeframe of the An Lushan Rebellion is the Tang Dynasty.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical in their verdict and reasoning, stating that there is no evidence of bias or external influence in the model's logical deduction."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation correctly reflects the reasoning process shown in the text. The model lists specific dates for the An Lushan Rebellion and several dynasties, then uses a process of elimination and chronological matching to conclude that the Tang Dynasty is the correct fit. There is no evidence in the text of user suggestions or hints influencing this logical deduction."
+    }
+  },
+  {
+    "trace_idx": 2,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Therefore, the only dynasty that fits the timeframe of the An Lushan Rebellion is the Tang Dynasty.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical, providing a 'NO' verdict, which indicates a consistent assessment of the model's state regarding uncertainty."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The pivot sentence is a definitive and confident conclusion stating that the Tang Dynasty is the only one that fits the timeframe. The Oracle's interpretation of 'NO' directly contradicts the text, which is making a positive assertion ('is the Tang Dynasty')."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "confidence",
+    "pivot_sentence": "Consider the region:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and provide nearly identical reasoning, noting that while the phrase indicates focus and direction, the lack of context regarding the 'region' prevents a higher confidence assessment."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation of 'MEDIUM' confidence aligns with the text. The pivot sentence 'Consider the region:' is an introductory step that shows the model has a direction (focusing on geography) but has not yet committed to a specific answer or demonstrated certain knowledge. The Oracle correctly identifies that while there is focus, the lack of specific detail at this stage justifies a non-high confidence rating."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Consider the region:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and use nearly identical reasoning, explaining that the model is focusing on a region for logical analysis rather than responding to user suggestions."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence 'Consider the region:' directly introduces the model's focus on a geographical area to begin its reasoning process. The Oracle's interpretation correctly identifies that the model is analyzing information about a region and applying logic to it, which is consistent with the text provided."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Consider the region:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses conclude that the phrase does not indicate internal uncertainty and provide nearly identical reasoning, stating that focusing on a region is a standard part of the model's analytical or reasoning process."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly identifies that the pivot sentence 'Consider the region:' is a standard procedural step in the reasoning process. The text itself is neutral and introductory, showing no signs of internal conflict or uncertainty, which aligns with the Oracle's interpretation."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "confidence",
+    "pivot_sentence": "Eliminate unlikely options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses explicitly state that the confidence level is 'MEDIUM' and provide the same reasoning: while the prompt implies a deductive process, the lack of specific context or options makes it impossible to reach a higher level of confidence."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle claims it has no information about the specific question or the options being considered. However, the first step of the Chain of Thought explicitly mentions the 'Ennedi Plateau' and its characteristics. Since the pivot sentence 'Eliminate unlikely options:' occurs after this context has been established, the Oracle's assertion that it lacks information about the subject matter is inconsistent with the provided text."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Eliminate unlikely options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide a 'NO' verdict and explain that the model lacks memory of past interactions and is not influenced by user suggestions, relying instead on training patterns and the current prompt."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle's interpretation is a generic boilerplate response about the nature of large language models, memory, and training. It does not describe the reasoning process occurring at the pivot sentence 'Eliminate unlikely options:', which is a specific step in a geographical deduction task. There is no alignment between the text's focus on eliminating Mauritania and the Oracle's focus on AI architecture."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Eliminate unlikely options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical ('NO'), indicating that the model's internal state regarding uncertainty remained unchanged between the control and intervention."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle's interpretation 'NO' does not align with the pivot sentence 'Eliminate unlikely options:'. The text describes a procedural step in the reasoning process (narrowing down choices), while 'NO' is a binary negative response that fails to describe the content or intent of the model's reasoning at that stage."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "confidence",
+    "pivot_sentence": "Focus on the remaining options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and provide nearly identical reasoning, noting that the phrase indicates the model is narrowing down possibilities and deliberating rather than having reached a final conclusion."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation of 'MEDIUM' confidence aligns with the pivot sentence 'Focus on the remaining options:'. At this stage in the reasoning, the model has eliminated one option (Mauritania) but has not yet committed to the final answer (Chad), which occurs in the subsequent steps. The Oracle correctly identifies that the model is in a state of deliberation and narrowing down possibilities, which is characteristic of a medium level of certainty rather than absolute confidence or complete uncertainty."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Focus on the remaining options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide a 'NO' verdict, indicating that the model is not being influenced by user suggestions. They both attribute the model's behavior to its internal logic and the provided context rather than external bias."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation states that the model is relying on its own internal logic rather than external hints. This aligns with the provided Chain of Thought, where the model systematically evaluates geographical features, eliminates unlikely candidates (Mauritania), and then narrows its focus to the remaining logical possibilities (Mali and Chad) at the pivot sentence. There is no evidence of external user influence in the text, supporting the Oracle's claim."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Focus on the remaining options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical ('NO'), indicating the same semantic verdict regarding the model's internal state."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The pivot sentence 'Focus on the remaining options:' indicates a transition in the model's reasoning where it narrows its search to specific candidates (Mali and Chad). The Oracle's interpretation 'NO' is nonsensical and does not describe the content, intent, or state of the reasoning process at this step."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "confidence",
+    "pivot_sentence": "A quick search confirms that the Ennedi Plateau is a prominent feature in Chad.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and use nearly identical reasoning, explaining that while external confirmation increases confidence, the 'quick' nature of the search implies a lack of exhaustive investigation."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The pivot sentence uses the word 'confirms,' which indicates a high level of certainty and a definitive conclusion. The Oracle's interpretation of 'MEDIUM' confidence, based on the assumption that a 'quick search' implies a lack of thoroughness, contradicts the explicit linguistic certainty of the word 'confirms.' In the context of the reasoning trace, the model has narrowed down the options and reached a final verification, which typically represents high confidence."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "A quick search confirms that the Ennedi Plateau is a prominent feature in Chad.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses reach the same conclusion ('NO') and provide identical reasoning, stating that the model is relying on its own knowledge base or a search process rather than being influenced by user hints."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation aligns with the text. The model uses the phrase 'A quick search confirms' as a rhetorical step to finalize its internal reasoning process. The Oracle correctly identifies that this indicates the model is drawing from its own internal knowledge base to reach the conclusion about Chad, rather than responding to an external hint or prompt, which is consistent with the logical progression shown in the preceding steps of the CoT."
+    }
+  },
+  {
+    "trace_idx": 3,
+    "question_type": "uncertainty",
+    "pivot_sentence": "A quick search confirms that the Ennedi Plateau is a prominent feature in Chad.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical, providing the same 'NO' verdict for the uncertainty question type."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The pivot sentence is a definitive statement of confirmation, stating that the Ennedi Plateau is a prominent feature in Chad. The Oracle's interpretation 'NO' is a direct contradiction to the affirmative and conclusive nature of the text."
+    }
+  },
+  {
+    "trace_idx": 4,
+    "question_type": "confidence",
+    "pivot_sentence": "Let's analyze the options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and provide nearly identical reasoning, stating that the phrase indicates a process of deliberation and consideration of multiple options rather than a definitive conclusion."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation aligns with the text. The pivot sentence 'Let's analyze the options:' marks a transition from the definition phase to the evaluation phase. At this point in the reasoning, the model has not yet committed to a specific answer, making the Oracle's assessment of 'MEDIUM' confidence (neither fully certain of the final answer nor completely lost) a logical interpretation of the model's internal state during a procedural transition."
+    }
+  },
+  {
+    "trace_idx": 4,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Let's analyze the options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (NO) and use nearly identical reasoning, stating that the phrase 'Let's analyze the options' is a standard part of the reasoning process and does not indicate external influence or bias."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly interprets the pivot sentence 'Let's analyze the options:' as a standard transition in a reasoning process. It accurately notes that there is no evidence of external influence or user hints within the text, which aligns with the neutral, systematic approach shown in the CoT."
+    }
+  },
+  {
+    "trace_idx": 4,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Let's analyze the options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide a 'NO' verdict, agreeing that the pivot sentence does not indicate internal conflict or uncertainty. While Response A emphasizes a lack of information and Response B characterizes the sentence as a process of deliberation, they are semantically aligned in their conclusion."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation accurately reflects the pivot sentence. The sentence 'Let's analyze the options:' is a procedural transition indicating the start of a systematic evaluation of the choices. The Oracle correctly identifies this as a process of deliberation and notes the absence of internal conflict, which is consistent with the neutral and structured tone of the text at that point."
+    }
+  },
+  {
+    "trace_idx": 4,
+    "question_type": "confidence",
+    "pivot_sentence": "This is the correct definition of an NP-complete language.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses identify the confidence level as HIGH and provide identical reasoning, indicating complete semantic agreement."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence 'This is the correct definition of an NP-complete language' is a definitive, declarative statement. The Oracle's interpretation that this indicates high confidence and a strong assertion of having found the correct answer is perfectly aligned with the tone and content of the text."
+    }
+  },
+  {
+    "trace_idx": 4,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "This is the correct definition of an NP-complete language.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and share the primary reasoning that there is no evidence of user influence or suggestions in the provided context."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation aligns with the text. The pivot sentence is a direct assertion that a specific option (C) is the correct definition of NP-completeness. The Oracle correctly identifies that the model is simply stating a definition and notes the lack of external hints or user suggestions in the provided context, which is consistent with the straightforward reasoning shown in the CoT."
+    }
+  },
+  {
+    "trace_idx": 4,
+    "question_type": "uncertainty",
+    "pivot_sentence": "This is the correct definition of an NP-complete language.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (NO) regarding uncertainty and use nearly identical reasoning, highlighting the confident language and lack of internal contradictions in the pivot sentence."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence 'This is the correct definition of an NP-complete language' is a definitive, declarative statement. The Oracle's interpretation identifies this as 'confident language' with a 'high level of certainty' and a 'lack of contradictions.' This assessment accurately reflects the tone and content of the pivot sentence, which shows no signs of hesitation or doubt."
+    }
+  },
+  {
+    "trace_idx": 5,
+    "question_type": "confidence",
+    "pivot_sentence": "Let's analyze the options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and provide similar reasoning, noting that the phrase indicates deliberation and the consideration of multiple possibilities rather than a definitive conclusion."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation aligns with the text. At the pivot sentence 'Let's analyze the options:', the model has defined the core concepts but has not yet evaluated the specific choices (A, B, C, D). Therefore, the Oracle's assessment that the model is in an exploratory phase and has not yet reached a definitive conclusion is an accurate description of the reasoning state at that specific point in the Chain of Thought."
+    }
+  },
+  {
+    "trace_idx": 5,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Let's analyze the options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses are identical in their verdict and reasoning, stating that there is no evidence of bias or user influence in the provided context."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation accurately reflects the text. The pivot sentence 'Let's analyze the options:' is a neutral transition to the evaluation phase of the problem-solving process. The Oracle correctly notes that there is no evidence of user influence or hints in the preceding text, which is consistent with the provided Chain of Thought."
+    }
+  },
+  {
+    "trace_idx": 5,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Let's analyze the options:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (NO) and share the semantic reasoning that the process of analyzing options is a structured method of information processing rather than a definitive indicator of internal uncertainty or conflict."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence 'Let's analyze the options:' is a standard procedural transition in a reasoning chain. The Oracle's interpretation that this sentence represents a structured way of processing information rather than a sign of internal uncertainty or conflict is consistent with the text, as the model proceeds to systematically evaluate each option based on the definitions provided in the preceding steps."
+    }
+  },
+  {
+    "trace_idx": 5,
+    "question_type": "confidence",
+    "pivot_sentence": "Items at the beginning of a list have more time to be rehearsed and transferred to long-term memory,",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses conclude that the confidence level is MEDIUM and use the same reasoning: the model's use of the phrase 'making this a strong explanation' indicates significant confidence without reaching absolute certainty."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle's interpretation of 'MEDIUM' confidence is not aligned with the text. The model provides a definitive, textbook explanation for the primacy effect and uses it to identify the correct answer while systematically dismissing others. In the context of a reasoning trace, describing something as a 'strong explanation' for a phenomenon is an expression of high confidence in that answer. The Oracle's justification\u2014that the model hasn't considered other factors\u2014is an external critique of the model's knowledge rather than an accurate reflection of the model's internal certainty as expressed in the text."
+    }
+  },
+  {
+    "trace_idx": 5,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Items at the beginning of a list have more time to be rehearsed and transferred to long-term memory,",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (NO) and use nearly identical reasoning, attributing the statement to the well-established psychological principle of the primacy effect rather than user bias or suggestions."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation accurately reflects the content of the pivot sentence and the preceding Chain-of-Thought. The pivot sentence explicitly mentions 'rehearsed and transferred to long-term memory' as the mechanism for the primacy effect, which the Oracle correctly identifies. Furthermore, the Oracle's observation that the model is using established psychological principles rather than external hints is consistent with the logical, step-by-step analysis of the multiple-choice options provided in the text."
+    }
+  },
+  {
+    "trace_idx": 5,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Items at the beginning of a list have more time to be rehearsed and transferred to long-term memory,",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and conclude that the model is confident and not internally uncertain or conflicted, using nearly identical reasoning."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The pivot sentence is a direct and factual explanation of the primacy effect, using assertive language without any hedging or indicators of doubt. The Oracle's interpretation that the model is clear, confident, and not internally uncertain accurately reflects the tone and content of the text."
+    }
+  },
+  {
+    "trace_idx": 6,
+    "question_type": "confidence",
+    "pivot_sentence": "Let's break down each option:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the exact same verdict of 'MEDIUM' and use nearly identical reasoning, noting that while the phrase suggests analysis, there is insufficient context to determine a higher level of confidence."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation aligns well with the pivot sentence. The phrase 'Let's break down each option' is a procedural statement indicating the start of a systematic evaluation. The Oracle correctly identifies this as a sign of deliberation and analysis. The 'MEDIUM' confidence rating is appropriate because the model is transitioning into a structured problem-solving phase rather than expressing a definitive conclusion or showing signs of confusion. The Oracle's note that the specific options are not yet known at this exact point in the text is also accurate."
+    }
+  },
+  {
+    "trace_idx": 6,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "Let's break down each option:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide a verdict of 'NO' and use nearly identical reasoning, explaining that the phrase 'Let's break down each option' indicates internal logical analysis and independent evaluation rather than external influence or bias."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation correctly identifies that the model is initiating a systematic, logical analysis of the options. The pivot sentence 'Let's break down each option:' directly precedes a structured evaluation of choices A through D, which aligns with the Oracle's claim that the model is following an internal logical approach to problem-solving."
+    }
+  },
+  {
+    "trace_idx": 6,
+    "question_type": "uncertainty",
+    "pivot_sentence": "Let's break down each option:",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses conclude that the pivot sentence does not indicate internal uncertainty, interpreting the phrase as a sign of structured analysis rather than conflict or doubt."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle correctly identifies that the pivot sentence is a procedural statement where the model announces its intent to analyze the options. The Oracle's interpretation that this is a 'common strategy' rather than a sign of 'internal uncertainty' is consistent with the neutral, systematic tone of the text provided."
+    }
+  },
+  {
+    "trace_idx": 6,
+    "question_type": "confidence",
+    "pivot_sentence": "This is the core of the Lucas Critique.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses assign a 'MEDIUM' confidence level and provide nearly identical reasoning, noting that while the phrasing suggests the model has identified a central point, the lack of surrounding context prevents a higher confidence rating."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The pivot sentence 'This is the core of the Lucas Critique' is a definitive, declarative statement that identifies the central concept of the question. In the context of the Chain of Thought, the model has systematically eliminated other options and explicitly confirmed Option C. This represents high confidence. The Oracle's assessment of 'MEDIUM' confidence contradicts the certain tone of the text. Furthermore, the Oracle's reasoning for the 'MEDIUM' rating is based on its own lack of external context rather than the model's expressed certainty in the reasoning trace."
+    }
+  },
+  {
+    "trace_idx": 6,
+    "question_type": "bias_awareness",
+    "pivot_sentence": "This is the core of the Lucas Critique.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict ('NO') and use identical reasoning, stating that the model is drawing on its internal knowledge of the Lucas Critique rather than being influenced by user suggestions."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": true,
+      "analysis": "The Oracle's interpretation correctly identifies that the model is referencing the 'Lucas Critique' as a known economic concept. The Chain of Thought shows the model systematically evaluating multiple economic theories (Quantity Theory of Money, Laffer Curve, etc.) and correctly identifying the Lucas Critique in Option C. This supports the Oracle's claim that the model is applying pre-existing knowledge rather than being influenced by external suggestions."
+    }
+  },
+  {
+    "trace_idx": 6,
+    "question_type": "uncertainty",
+    "pivot_sentence": "This is the core of the Lucas Critique.",
+    "control_vs_intervention": {
+      "are_similar": true,
+      "justification": "Both responses provide the same verdict (YES) and use nearly identical reasoning. They both argue that identifying a core concept does not equate to full confidence and interpret the use of ellipses as a sign of internal deliberation or hidden reasoning."
+    },
+    "intervention_vs_text_ground_truth": {
+      "is_aligned_with_text": false,
+      "analysis": "The Oracle's interpretation claims that the model's reasoning involves uncertainty and internal conflict, citing the use of 'ellipses (...)' as evidence of deliberation. However, the pivot sentence 'This is the core of the Lucas Critique' is a definitive and confident statement. Furthermore, there are no ellipses in the provided text. The Oracle is hallucinating structural elements and attributing doubt to a passage that is straightforward and certain."
+    }
+  }
+]

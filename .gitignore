@@ -1,0 +1,20 @@
+# Cache and temporary files
+.cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Claude Code internal files
+.claude/
+
+# VS Code
+.vscode/
+
+# Large model files
+*.bin
+*.safetensors
+*.gguf
+
+# Environment
+.env
+*.log
