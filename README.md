@@ -26,8 +26,9 @@ The experiment consists of two phases:
 
 ```
 .
-├── cot_ao.ipynb                 # Phase 1: CoT generation (Qwen3)
-├── cot_ao_p2_g.ipynb            # Phase 2: Oracle interrogation (Gemma 2-9B)
+├── phase1.ipynb                 # Phase 1: CoT generation (Qwen3)
+├── gemma_phase2.ipynb            # Phase 2: Oracle interrogation (Gemma 2-9B)
+├── qwen_phase2.ipynb            # Phase 2: Oracle interrogation (Qwen3-4B)
 ├── gemma_cot_generation.py      # Gemma-adapted CoT parsing functions
 ├── gemma_cot_ao_p2_cells.py     # Phase 2 cells adapted for Gemma
 ├── gemma_step5_cell.py          # Notebook cell code for Gemma CoT
