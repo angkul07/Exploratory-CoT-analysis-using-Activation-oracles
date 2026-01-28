@@ -31,10 +31,13 @@ The experiment consists of two phases:
 ├── gemma_cot_generation.py      # Gemma-adapted CoT parsing functions
 ├── gemma_cot_ao_p2_cells.py     # Phase 2 cells adapted for Gemma
 ├── gemma_step5_cell.py          # Notebook cell code for Gemma CoT
+├── llm_judge.py                 # LLM-as-Judge evaluation script
 ├── hinted_questions.json        # Source questions with hints
 ├── gemma_cot_traces.json        # Phase 1 output: CoT traces
 ├── gemma_pivot_traces.json      # Phase 1 output: traces with pivot points
 ├── gemma_phase2_experiment_results.json  # Phase 2 results
+├── gemma_llm_judge_final_report.json     # Gemma LLM judge results
+├── qwen_llm_judge_final_report.json      # Qwen LLM judge results
 ├── gemma_results.md             # Detailed analysis of experiment results
 ├── plan.md                      # Original implementation plan
 └── README.md                    # This file
@@ -111,19 +114,33 @@ Two critical bugs were fixed in the experimental design:
 
 2. **Norm Scaling Fix**: Raw activations are scaled to match the mean vector's norm to prevent overwhelming layer 1 with out-of-distribution magnitudes.
 
-## Results (Gemma 2-9B)
+## Results (LLM-as-Judge Evaluation)
+
+Results evaluated using Gemini as an LLM judge to assess:
+1. **Similarity Rate**: Do control (mean vector) and intervention (actual activations) produce semantically similar responses?
+2. **Alignment Rate**: Does the oracle's interpretation align with what the CoT text actually says?
+
+### Gemma 2-9B
 
 | Metric | Value |
 |--------|-------|
-| Overall Surprise Rate | 80% |
-| Confidence Questions | 86.7% surprise |
-| Bias Awareness Questions | 86.7% surprise |
-| Uncertainty Questions | 66.7% surprise |
+| Total Evaluated | 45 |
+| Control/Intervention Similarity | **97.8%** |
+| Intervention/Text Alignment | **71.1%** |
 
-Key findings:
-- Activations provide measurable but subtle influence on oracle responses
-- Both conditions produce coherent, analytical outputs after fixes
-- Lower surprise rate for uncertainty questions suggests this is more text-derivable
+### Qwen3-4B
+
+| Metric | Value |
+|--------|-------|
+| Total Evaluated | 126 |
+| Control/Intervention Similarity | **56.3%** |
+| Intervention/Text Alignment | **20.6%** |
+
+### Key Findings
+
+- **Gemma**: High similarity (97.8%) suggests activations add minimal information beyond text. The oracle largely ignores the activation vectors.
+- **Qwen**: Lower similarity (56.3%) indicates activations DO influence oracle responses differently from mean vectors.
+- **Alignment Gap**: Both models show the oracle's interpretation often diverges from what the text actually says (71% Gemma, 21% Qwen).
 
 See [gemma_results.md](gemma_results.md) for detailed analysis.
 
@@ -156,12 +173,15 @@ See [gemma_results.md](gemma_results.md) for detailed analysis.
 - **gemma_cot_generation.py**: Importable module with Gemma-adapted CoT functions
 - **gemma_cot_ao_p2_cells.py**: All Phase 2 cells for copy-paste into notebooks
 - **gemma_step5_cell.py**: Step 5 cell code for CoT generation
+- **llm_judge.py**: LLM-as-Judge evaluation using Gemini to assess similarity and alignment
 
 ### Data Files
 - **hinted_questions.json**: Source questions with various hint types
 - **gemma_cot_traces.json**: Generated CoT traces from Phase 1
 - **gemma_pivot_traces.json**: CoT traces with identified pivot points
 - **gemma_phase2_experiment_results.json**: Full Phase 2 experiment output
+- **gemma_llm_judge_final_report.json**: LLM judge evaluation for Gemma
+- **qwen_llm_judge_final_report.json**: LLM judge evaluation for Qwen
 
 ### Documentation
 - **plan.md**: Original implementation plan and methodology
